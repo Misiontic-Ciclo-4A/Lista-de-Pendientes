@@ -8,8 +8,10 @@ export function TodoList({ onToggle, todos = [] }) {
 
   return (
     <>
+      <hr />
       <span> Pendientes: {incomplete.length}. </span>
-      <ul className="card">
+      <hr />
+      <ul>
         {todos?.map(({ id, description, isDone }) => (
           <TodoItem
             key={id}
