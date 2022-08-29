@@ -1,8 +1,8 @@
-export function TodoItem({ id, description, isDone = false }) {
+export function TodoItem({ id, description, onToggle, isDone = false }) {
   const className = isDone ? "done" : "";
 
   return (
-    <li key={id} className={"item " + className}>
+    <li className={"item " + className} onClick={() => onToggle(id)}>
       {description}
     </li>
   );
